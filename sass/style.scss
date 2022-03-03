@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+$color-background-black: #181726;
+$color-background-white: #fcf9f8;
+$color-orange: #ffba66;
+$color-red: #fa7352;
+$color-cyan: #65e2db;
+
+%btn-design {
+    padding: 15px 30px;
+    margin-bottom: 1.4rem;
+    border-radius: 12px;
+    text-decoration: none;
+    height: 4rem;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    background: url(../assets/bg-main-desktop.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.header {
+    padding-left: 10%;
+    text-align: left;
+    display: block;
+    height: 75vh;
+    margin-bottom: 10rem;
+    .header__top {
+        position: relative;
+
+        .header__logo {
+            margin-top: 60px;
+        }
+        .header__pattern--1 {
+            margin-top: -2.5rem;
+            position: absolute;
+            right: 0rem;
+            top: -4rem;
+        }
+        .header__title {
+            .header__title--music {
+                font-size: 5rem;
+                line-height: 5rem;
+                letter-spacing: 0.15rem;
+                width: 70%;
+                margin: 4rem 0;
+            }
+        }
+        .header__title--description {
+            font-size: 1.125rem;
+            line-height: 2rem;
+            width: 50%;
+        }
+    }
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 10rem;
+
+    .main__illustration {
+        border-radius: 10px;
+        background-color: $color-background-black;
+        margin: 1rem 0;
+        height: 100vh;
+
+        .main__illustration--image--phone {
+            z-index: 2;
+            position: relative;
+            img {
+                width: 27%;
+                position: absolute;
+                top: -11rem;
+                left: 10rem;
+            }
+        }
+        .main__illustration--design {
+            z-index: 1;
+            position: relative;
+            top: -34rem;
+            left: 15rem;
+            img {
+                width: 29%;
+                position: absolute;
+                top: 31rem;
+                left: 9rem;
+            }
+        }
+        .main__orange--card {
+            background-color: $color-red;
+            width: 30vw;
+            position: absolute;
+            height: 90vh;
+            left: 40rem;
+            bottom: -5rem;
+            z-index: 3;
+            border-radius: 10px;
+            padding: 3rem;
+            color: $color-background-white;
+
+            .main__orange--card--title {
+                font-size: 2rem;
+                line-height: 40px;
+                margin-bottom: 3rem;
+                margin-top: 1rem;
+            }
+
+            .main__orange--card--description {
+                font-weight: 400;
+                line-height: 1.6rem;
+                margin-bottom: 3rem;
+            }
+
+            .main__orange--card--price {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 3rem;
+
+                .main__orange--card--price--four-dollars {
+                    font-size: 4rem;
+                    font-weight: 700;
+                }
+
+                .main__orange--card--price--per-month {
+                    margin-left: 1rem;
+                }
+            }
+
+            .main__orange--card--button {
+                display: flex;
+                flex-direction: column;
+
+                .main__orange--card--ios--button {
+                    @extend %btn-design;
+                    background-color: $color-background-black;
+                    color: $color-background-white;
+                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        margin: 0 0.5rem;
+                    }
+                }
+
+                .main__orange--card--android--button {
+                    @extend %btn-design;
+                    background-color: $color-background-white;
+                    color: $color-background-black;
+                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        margin: 0 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 0;
+
+    .footer__informations {
+        p {
+            margin: 0.5rem 0;
+        }
+    }
+
+    .footer__icons--social--network {
+        img {
+            margin: 0 0.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body {
+        background-size: contain;
+        background-position: center;
+    }
+
+    .header {
+        padding-left: 5%;
+        height: 65vh;
+        margin-bottom: 5rem;
+        .header__top {
+            .header__title {
+                bottom: 32rem;
+                .header__title--music {
+                    font-size: 3.8rem;
+                    line-height: 4rem;
+                    letter-spacing: 0.15rem;
+                    width: 60%;
+                }
+            }
+            .header__title--description {
+                width: 62%;
+            }
+        }
+    }
+
+    .main {
+        width: 90%;
+        margin-bottom: 2rem;
+        .main__illustration {
+            height: 70vh;
+
+            .main__illustration--image--phone {
+                img {
+                    top: -6rem;
+                    left: 7rem;
+                }
+            }
+            .main__illustration--design {
+                img {
+                    top: 32rem;
+                    left: 0;
+                }
+            }
+            .main__orange--card {
+                left: 14rem;
+                bottom: 2rem;
+                padding: 1.5rem;
+                width: 42vw;
+                height: 60vh;
+            }
+        }
+    }
+
+    .footer {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        background-size: contain;
+        background-position: left;
+    }
+    .header {
+        padding: 1.2rem;
+        height: 90vh;
+        .header__top {
+            .header__logo {
+                margin-top: 2rem;
+            }
+            .header__title {
+                width: 100%;
+                .header__title--music {
+                    font-size: 2.5rem;
+                    width: 100%;
+                    line-height: 3rem;
+                }
+                .header__title--description {
+                    width: 100%;
+                }
+            }
+            .header__pattern--1 {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+        .main__illustration {
+            .main__illustration--image--phone {
+                img {
+                    top: -9rem;
+                    left: 3.5rem;
+                    width: 60%;
+                }
+            }
+            .main__illustration--design {
+                img {
+                    width: 75%;
+                    top: 34rem;
+                    left: -12rem;
+                }
+            }
+            .main__orange--card {
+                left: 0;
+                bottom: -26rem;
+                padding: 1.5rem;
+                width: 100%;
+                height: 78vh;
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25rem;
+        align-items: flex-start;
+        .footer__logo {
+            margin: 1rem 0;
+        }
+        .footer__icons--social--network {
+            margin: 1rem 0;
+        }
+    }
+}
